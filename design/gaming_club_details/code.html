@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Play Point - Gaming Club Details</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#00eeff",
+                        "secondary": "#a855f7",
+                        "background-light": "#f5f8f8",
+                        "background-dark": "#070b0b",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .glass {
+            background: rgba(15, 34, 35, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(0, 238, 255, 0.1);
+        }
+        .cyan-glow {
+            box-shadow: 0 0 15px rgba(0, 238, 255, 0.3);
+        }
+        .purple-glow {
+            box-shadow: 0 0 15px rgba(168, 85, 247, 0.3);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+<!-- Sticky Top Navigation -->
+<div class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between p-4 bg-gradient-to-b from-black/80 to-transparent">
+<button class="flex size-10 items-center justify-center rounded-full bg-black/30 backdrop-blur-md text-white border border-white/10">
+<span class="material-symbols-outlined">arrow_back_ios_new</span>
+</button>
+<div class="flex gap-2">
+<button class="flex size-10 items-center justify-center rounded-full bg-black/30 backdrop-blur-md text-white border border-white/10">
+<span class="material-symbols-outlined">share</span>
+</button>
+<button class="flex size-10 items-center justify-center rounded-full bg-black/30 backdrop-blur-md text-white border border-white/10">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+</div>
+</div>
+<div class="relative min-h-screen pb-32">
+<!-- Hero Section -->
+<div class="relative h-[45vh] w-full overflow-hidden">
+<img alt="Gaming Club Interior" class="h-full w-full object-cover" data-alt="Interior of a modern gaming club with neon lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8rav9rIb7yIBP7zp863i2BBzNH8bECPCrOpoiKB8XQ1FuD9_WC3ijeeTdQGZ_OwZKj-K2Q7ulAJm9NCYn31CW70UaSuSnJfNsv5QUWE8C-kW2ZB_xo5ZM7_-JBpRNa0wKyo6cKjuZB1GvZQ8KyUxmfpkUfEX1SYLUcYLeRinqctEvdKoeduz0f98T5P7qfU75ivOVASejMyxAmsD7GOeql3EuDeZih1nYu_gObbVwfR8Oh2GzS_hTYWxXLjbm_t28riPRT59XQcF2"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent"></div>
+<!-- Hero Glass Overlay -->
+<div class="absolute bottom-6 left-4 right-4 glass p-4 rounded-xl">
+<div class="flex justify-between items-start">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<h1 class="text-2xl font-bold text-white tracking-tight">Play Point Gaming</h1>
+<span class="material-symbols-outlined text-primary text-sm">verified</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-yellow-400 text-lg fill-1">star</span>
+<span class="text-white font-bold text-sm">4.9</span>
+<span class="text-slate-400 text-xs">(248 reviews)</span>
+</div>
+<span class="h-1 w-1 rounded-full bg-slate-500"></span>
+<span class="text-primary text-xs font-medium uppercase tracking-widest">Premium Club</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Content -->
+<div class="px-4 -mt-2 space-y-6">
+<!-- Quick Info Bar -->
+<div class="flex gap-2 overflow-x-auto pb-2 no-scrollbar">
+<div class="flex items-center gap-2 bg-slate-800/40 dark:bg-white/5 border border-white/5 px-3 py-2 rounded-lg shrink-0">
+<span class="material-symbols-outlined text-primary text-sm">location_on</span>
+<span class="text-sm">Chilonzor, Tashkent</span>
+</div>
+<div class="flex items-center gap-2 bg-slate-800/40 dark:bg-white/5 border border-white/5 px-3 py-2 rounded-lg shrink-0">
+<span class="material-symbols-outlined text-primary text-sm">schedule</span>
+<span class="text-sm">Open 24/7</span>
+</div>
+<div class="flex items-center gap-2 bg-slate-800/40 dark:bg-white/5 border border-white/5 px-3 py-2 rounded-lg shrink-0">
+<span class="material-symbols-outlined text-primary text-sm">wifi</span>
+<span class="text-sm">500 Mbps</span>
+</div>
+</div>
+<!-- Real-Time Counter Dashboard -->
+<div class="relative overflow-hidden rounded-xl bg-gradient-to-br from-primary/20 via-background-dark to-secondary/20 p-[1px] cyan-glow">
+<div class="bg-background-dark rounded-[11px] p-5">
+<div class="flex justify-between items-center mb-4">
+<div class="flex items-center gap-2">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+<p class="text-sm font-medium text-primary uppercase tracking-widest">Live Status</p>
+</div>
+<p class="text-xs text-slate-400">Updated just now</p>
+</div>
+<div class="flex items-end justify-between">
+<div class="space-y-1">
+<p class="text-slate-400 text-sm">Available PCs</p>
+<h2 class="text-4xl font-bold text-white tracking-tighter">14 <span class="text-xl text-slate-500 font-normal">/ 40</span></h2>
+</div>
+<div class="text-right">
+<div class="h-1.5 w-32 bg-white/10 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[35%] rounded-full shadow-[0_0_10px_#00eeff]"></div>
+</div>
+<p class="text-[10px] text-slate-500 mt-2 uppercase">Current Occupancy: 65%</p>
+</div>
+</div>
+</div>
+</div>
+<!-- PC Specifications -->
+<section class="space-y-3">
+<div class="flex justify-between items-center">
+<h3 class="text-lg font-bold text-white">The Rig (Standard Zone)</h3>
+<button class="text-primary text-xs font-bold uppercase tracking-wider">View VIP Specs</button>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<div class="bg-white/5 border border-white/10 p-4 rounded-lg flex items-center gap-3">
+<div class="size-10 rounded bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">memory</span>
+</div>
+<div>
+<p class="text-[10px] uppercase text-slate-500 font-bold">Processor</p>
+<p class="text-sm font-semibold text-white">Intel i9-13900K</p>
+</div>
+</div>
+<div class="bg-white/5 border border-white/10 p-4 rounded-lg flex items-center gap-3">
+<div class="size-10 rounded bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">developer_board</span>
+</div>
+<div>
+<p class="text-[10px] uppercase text-slate-500 font-bold">Graphics Card</p>
+<p class="text-sm font-semibold text-white">RTX 4090 TI</p>
+</div>
+</div>
+<div class="bg-white/5 border border-white/10 p-4 rounded-lg flex items-center gap-3">
+<div class="size-10 rounded bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">desktop_windows</span>
+</div>
+<div>
+<p class="text-[10px] uppercase text-slate-500 font-bold">Monitor</p>
+<p class="text-sm font-semibold text-white">360Hz BenQ Zowie</p>
+</div>
+</div>
+<div class="bg-white/5 border border-white/10 p-4 rounded-lg flex items-center gap-3">
+<div class="size-10 rounded bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">sd_card</span>
+</div>
+<div>
+<p class="text-[10px] uppercase text-slate-500 font-bold">Memory</p>
+<p class="text-sm font-semibold text-white">32GB DDR5</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Description -->
+<section class="space-y-2">
+<h3 class="text-lg font-bold text-white">About Play Point</h3>
+<p class="text-slate-400 text-sm leading-relaxed">
+                    Play Point offers the ultimate gaming experience in Tashkent. Featuring top-tier hardware, ergonomic SecretLab chairs, and a lag-free environment optimized for competitive play. Our club is designed for serious gamers who demand the best performance.
+                </p>
+</section>
+<!-- Amenities -->
+<section class="space-y-3">
+<h3 class="text-lg font-bold text-white">Amenities</h3>
+<div class="flex gap-4">
+<div class="flex flex-col items-center gap-1 group">
+<div class="size-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary">coffee</span>
+</div>
+<span class="text-[10px] text-slate-500 font-medium">Café</span>
+</div>
+<div class="flex flex-col items-center gap-1 group">
+<div class="size-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary">king_bed</span>
+</div>
+<span class="text-[10px] text-slate-500 font-medium">VIP Zone</span>
+</div>
+<div class="flex flex-col items-center gap-1 group">
+<div class="size-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary">sports_esports</span>
+</div>
+<span class="text-[10px] text-slate-500 font-medium">PS5 Pro</span>
+</div>
+<div class="flex flex-col items-center gap-1 group">
+<div class="size-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary">air</span>
+</div>
+<span class="text-[10px] text-slate-500 font-medium">AC</span>
+</div>
+</div>
+</section>
+<!-- Location Mini Map -->
+<section class="space-y-3">
+<div class="flex justify-between items-center">
+<h3 class="text-lg font-bold text-white">Location</h3>
+<p class="text-primary text-sm font-medium">Open Maps</p>
+</div>
+<div class="h-40 w-full rounded-xl overflow-hidden grayscale contrast-125 border border-white/10">
+<img alt="Location Map" class="h-full w-full object-cover" data-alt="Map showing location in Tashkent" data-location="Tashkent" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnuZGM6w6W39CBAqrxzbPfwJFHhestInAFONeZ90U4nmp-2cXlasKqj-8pCMq6cred3jr9ZO_zdVxNv1v7KfvT9ZckQjryCtH7HIU60M9KpId9e-2DSfoEVOEGXcAZoYh3BZamXek9PozEln_j8_9V77WH6rh2PeM0VsOjknRf16T4cr2lBHcI5yvsrO5q7CrMh5Dhf6YQRBmrLi-dOm1K3ycxNNMnLHwg76FR1JkU7QdnQAeuw3Z5SjIO_898bh10US5moQmSYTvN"/>
+</div>
+</section>
+</div>
+</div>
+<!-- Sticky Booking Button (iOS Style) -->
+<div class="fixed bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-background-dark via-background-dark/95 to-transparent pb-10">
+<div class="flex items-center gap-4">
+<div class="flex-1">
+<p class="text-xs text-slate-500 uppercase font-bold tracking-widest">Pricing From</p>
+<p class="text-xl font-bold text-white">15,000 <span class="text-sm font-medium text-slate-400">UZS / hr</span></p>
+</div>
+<button class="flex-[2] bg-primary text-background-dark font-bold py-4 rounded-xl cyan-glow flex items-center justify-center gap-2 active:scale-95 transition-transform">
+<span>Book a Seat</span>
+<span class="material-symbols-outlined text-xl">confirmation_number</span>
+</button>
+</div>
+</div>
+</body></html>

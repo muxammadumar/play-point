@@ -1,0 +1,25 @@
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["postgresqlExtensions"]
+}
+
+datasource db {
+  provider   = "postgresql"
+  url        = env("DATABASE_URL")
+  extensions = [postgis]
+}
+
+model User {
+  id           Int      @id @default(autoincrement())
+  telegramId   BigInt   @unique // Telegram user IDs are large numbers
+  firstName    String
+  lastName     String? // optional, not everyone has one
+  username     String? // optional, not everyone sets one
+  languageCode String? // e.g. "en", "uz"
+  photoUrl     String? // profile photo URL
+  isPremium    Boolean  @default(false) // Telegram Premium status
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  @@map("users") // table name in DB will be "users"
+}

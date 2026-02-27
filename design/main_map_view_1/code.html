@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Play Point - Gaming Club List View</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#00eeff",
+                        "secondary": "#bd00ff",
+                        "background-light": "#f5f8f8",
+                        "background-dark": "#0a0e27",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Space Grotesk', sans-serif; }
+        .glass-effect {
+            background: rgba(15, 34, 35, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(0, 238, 255, 0.1);
+        }
+        .glass-card {
+            background: rgba(20, 30, 60, 0.6);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .neon-glow-cyan {
+            box-shadow: 0 0 15px rgba(0, 238, 255, 0.4);
+        }
+        .neon-text {
+            text-shadow: 0 0 10px rgba(0, 238, 255, 0.5);
+        }
+        .bg-pattern {
+            background-color: #0a0e27;
+            background-image: radial-gradient(circle at 2px 2px, rgba(0, 238, 255, 0.03) 1px, transparent 0);
+            background-size: 30px 30px;
+        }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-white overflow-hidden">
+<div class="relative flex h-screen w-full flex-col overflow-hidden bg-pattern">
+<div class="relative z-20 w-full px-4 pt-12 pb-4 bg-background-dark/80 backdrop-blur-md border-b border-white/5">
+<div class="flex items-center justify-between gap-3 mb-4">
+<div class="flex-1 flex items-center gap-2 bg-white/5 rounded-xl px-4 h-12 border border-white/5">
+<span class="material-symbols-outlined text-primary/60 text-xl">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm placeholder:text-gray-400 w-full p-0" placeholder="Find gaming clubs..." type="text"/>
+</div>
+<button class="h-12 px-4 flex items-center gap-2 rounded-xl bg-primary/10 border border-primary/30 text-primary hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-xl">map</span>
+<span class="text-sm font-semibold">Map</span>
+</button>
+</div>
+<div class="flex gap-2 overflow-x-auto no-scrollbar pb-1">
+<button class="shrink-0 flex items-center gap-1.5 px-4 py-2 rounded-lg border border-primary/40 text-xs font-medium bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+                    Filters
+                </button>
+<button class="shrink-0 px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-xs font-medium text-gray-300 hover:bg-white/10">
+                    Open Now
+                </button>
+<button class="shrink-0 px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-xs font-medium text-gray-300 hover:bg-white/10">
+                    Near Me
+                </button>
+<button class="shrink-0 px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-xs font-medium text-gray-300 hover:bg-white/10">
+                    VIP Rooms
+                </button>
+</div>
+</div>
+<div class="flex-1 overflow-y-auto px-4 py-2 pb-24 space-y-4 no-scrollbar">
+<div class="text-xs text-gray-400 font-medium px-1">Found 24 clubs nearby</div>
+<div class="glass-card rounded-2xl p-3 flex gap-4 hover:border-primary/30 transition-colors group">
+<div class="w-32 h-32 rounded-xl bg-cover bg-center shrink-0 relative overflow-hidden" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAZgDM3HcCefMRxergc2kiTFi2l5TVk-4vhnD8rp4XUqwFpcrlnpRr4vYoea_F1Pun4MpOjMvmhMcfC-DXGjhGlC3_bWMA7Se-f4xGd35-k1BiQVWQ2H5avszv0FvuChICBapy6UL-L3wg3EFbk-A4W4ElT1_NSpOnTSEmEf6lduNuGIhbqK_aO6XfX8zylujTGnut4bsoz_uOAUx6sRCCN1YYptV2wAwjNtUG0M_hhGJY689GB1Q5pLxgoDb3yxUU3DiSi6JUwWXyT')">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute top-2 left-2 bg-black/60 backdrop-blur-sm px-1.5 py-0.5 rounded text-[10px] font-bold border border-white/10 text-white flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-amber-400 fill-1">star</span> 4.9
+                    </div>
+</div>
+<div class="flex-1 flex flex-col justify-between py-1 min-w-0">
+<div>
+<div class="flex justify-between items-start">
+<h3 class="font-bold text-lg leading-tight truncate pr-2 group-hover:text-primary transition-colors">Cyber Arena</h3>
+<button class="text-gray-400 hover:text-white">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+</div>
+<p class="text-xs text-gray-400 mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+                            0.5 km • Chilanzar
+                        </p>
+</div>
+<div class="mt-2">
+<div class="flex items-center gap-2 mb-2">
+<span class="bg-green-500/10 text-green-400 px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider border border-green-500/20 flex items-center gap-1">
+<span class="size-1.5 rounded-full bg-green-400 animate-pulse"></span>
+                                Available
+                            </span>
+<span class="text-[10px] text-gray-500 bg-white/5 px-2 py-0.5 rounded">RTX 4090</span>
+</div>
+<div class="flex items-end justify-between">
+<div>
+<span class="text-sm font-bold text-white">15,000</span>
+<span class="text-[10px] text-gray-400">UZS/hr</span>
+</div>
+<button class="h-8 px-4 bg-primary text-background-dark text-xs font-bold rounded-lg flex items-center justify-center shadow-[0_0_10px_rgba(0,238,255,0.2)]">
+                                Book
+                            </button>
+</div>
+</div>
+</div>
+</div>
+<div class="glass-card rounded-2xl p-3 flex gap-4 hover:border-secondary/30 transition-colors group border-l-4 border-l-secondary">
+<div class="w-32 h-32 rounded-xl bg-cover bg-center shrink-0 relative overflow-hidden" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAZgDM3HcCefMRxergc2kiTFi2l5TVk-4vhnD8rp4XUqwFpcrlnpRr4vYoea_F1Pun4MpOjMvmhMcfC-DXGjhGlC3_bWMA7Se-f4xGd35-k1BiQVWQ2H5avszv0FvuChICBapy6UL-L3wg3EFbk-A4W4ElT1_NSpOnTSEmEf6lduNuGIhbqK_aO6XfX8zylujTGnut4bsoz_uOAUx6sRCCN1YYptV2wAwjNtUG0M_hhGJY689GB1Q5pLxgoDb3yxUU3DiSi6JUwWXyT'); filter: hue-rotate(45deg);">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute top-2 left-2 bg-black/60 backdrop-blur-sm px-1.5 py-0.5 rounded text-[10px] font-bold border border-white/10 text-white flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-amber-400 fill-1">star</span> 5.0
+                    </div>
+</div>
+<div class="flex-1 flex flex-col justify-between py-1 min-w-0">
+<div>
+<div class="flex justify-between items-start">
+<h3 class="font-bold text-lg leading-tight truncate pr-2 text-secondary group-hover:text-white transition-colors">Level Up</h3>
+<button class="text-secondary hover:text-white">
+<span class="material-symbols-outlined fill-1">favorite</span>
+</button>
+</div>
+<p class="text-xs text-gray-400 mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+                            1.2 km • Yunusabad
+                        </p>
+</div>
+<div class="mt-2">
+<div class="flex items-center gap-2 mb-2">
+<span class="bg-amber-500/10 text-amber-400 px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider border border-amber-500/20">
+                                Busy
+                            </span>
+<span class="text-[10px] text-secondary bg-secondary/10 px-2 py-0.5 rounded border border-secondary/20">Premium</span>
+</div>
+<div class="flex items-end justify-between">
+<div>
+<span class="text-sm font-bold text-white">25,000</span>
+<span class="text-[10px] text-gray-400">UZS/hr</span>
+</div>
+<button class="h-8 px-4 bg-white/10 text-white border border-white/20 text-xs font-bold rounded-lg flex items-center justify-center hover:bg-white/20">
+                                View
+                            </button>
+</div>
+</div>
+</div>
+</div>
+<div class="glass-card rounded-2xl p-3 flex gap-4 hover:border-primary/30 transition-colors group">
+<div class="w-32 h-32 rounded-xl bg-cover bg-center shrink-0 relative overflow-hidden" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAZgDM3HcCefMRxergc2kiTFi2l5TVk-4vhnD8rp4XUqwFpcrlnpRr4vYoea_F1Pun4MpOjMvmhMcfC-DXGjhGlC3_bWMA7Se-f4xGd35-k1BiQVWQ2H5avszv0FvuChICBapy6UL-L3wg3EFbk-A4W4ElT1_NSpOnTSEmEf6lduNuGIhbqK_aO6XfX8zylujTGnut4bsoz_uOAUx6sRCCN1YYptV2wAwjNtUG0M_hhGJY689GB1Q5pLxgoDb3yxUU3DiSi6JUwWXyT'); filter: hue-rotate(180deg) saturate(1.5);">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute top-2 left-2 bg-black/60 backdrop-blur-sm px-1.5 py-0.5 rounded text-[10px] font-bold border border-white/10 text-white flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-amber-400 fill-1">star</span> 4.7
+                    </div>
+</div>
+<div class="flex-1 flex flex-col justify-between py-1 min-w-0">
+<div>
+<div class="flex justify-between items-start">
+<h3 class="font-bold text-lg leading-tight truncate pr-2 group-hover:text-primary transition-colors">Vortex Gaming</h3>
+<button class="text-gray-400 hover:text-white">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+</div>
+<p class="text-xs text-gray-400 mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+                            2.8 km • Mirzo Ulugbek
+                        </p>
+</div>
+<div class="mt-2">
+<div class="flex items-center gap-2 mb-2">
+<span class="bg-green-500/10 text-green-400 px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider border border-green-500/20 flex items-center gap-1">
+<span class="size-1.5 rounded-full bg-green-400 animate-pulse"></span>
+                                Available
+                            </span>
+<span class="text-[10px] text-gray-500 bg-white/5 px-2 py-0.5 rounded">PS5</span>
+</div>
+<div class="flex items-end justify-between">
+<div>
+<span class="text-sm font-bold text-white">12,000</span>
+<span class="text-[10px] text-gray-400">UZS/hr</span>
+</div>
+<button class="h-8 px-4 bg-primary text-background-dark text-xs font-bold rounded-lg flex items-center justify-center shadow-[0_0_10px_rgba(0,238,255,0.2)]">
+                                Book
+                            </button>
+</div>
+</div>
+</div>
+</div>
+<div class="glass-card rounded-2xl p-3 flex gap-4 hover:border-primary/30 transition-colors group opacity-70">
+<div class="w-32 h-32 rounded-xl bg-cover bg-center shrink-0 relative overflow-hidden" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAZgDM3HcCefMRxergc2kiTFi2l5TVk-4vhnD8rp4XUqwFpcrlnpRr4vYoea_F1Pun4MpOjMvmhMcfC-DXGjhGlC3_bWMA7Se-f4xGd35-k1BiQVWQ2H5avszv0FvuChICBapy6UL-L3wg3EFbk-A4W4ElT1_NSpOnTSEmEf6lduNuGIhbqK_aO6XfX8zylujTGnut4bsoz_uOAUx6sRCCN1YYptV2wAwjNtUG0M_hhGJY689GB1Q5pLxgoDb3yxUU3DiSi6JUwWXyT'); filter: grayscale(0.8);">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute top-2 left-2 bg-black/60 backdrop-blur-sm px-1.5 py-0.5 rounded text-[10px] font-bold border border-white/10 text-white flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-amber-400 fill-1">star</span> 4.5
+                    </div>
+<div class="absolute inset-0 flex items-center justify-center bg-black/40 backdrop-blur-[1px]">
+<span class="text-xs font-bold uppercase tracking-widest text-white border border-white px-2 py-1 rounded">Closed</span>
+</div>
+</div>
+<div class="flex-1 flex flex-col justify-between py-1 min-w-0">
+<div>
+<div class="flex justify-between items-start">
+<h3 class="font-bold text-lg leading-tight truncate pr-2 text-gray-400">Matrix Club</h3>
+<button class="text-gray-400 hover:text-white">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+</div>
+<p class="text-xs text-gray-500 mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+                            3.5 km • Yakkasaray
+                        </p>
+</div>
+<div class="mt-2">
+<div class="flex items-center gap-2 mb-2">
+<span class="bg-red-500/10 text-red-400 px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider border border-red-500/20">
+                                Full
+                            </span>
+</div>
+<div class="flex items-end justify-between">
+<div>
+<span class="text-sm font-bold text-gray-400">18,000</span>
+<span class="text-[10px] text-gray-500">UZS/hr</span>
+</div>
+<button class="h-8 px-4 bg-white/5 text-gray-400 border border-white/10 text-xs font-bold rounded-lg flex items-center justify-center cursor-not-allowed">
+                                Wait
+                            </button>
+</div>
+</div>
+</div>
+</div>
+<div class="h-10"></div>
+</div>
+<div class="absolute bottom-0 w-full bg-gradient-to-t from-background-dark to-transparent pt-10 pb-6 pointer-events-none z-20">
+<div class="h-1 w-1/3 bg-white/20 rounded-full mx-auto opacity-30"></div>
+</div>
+</div>
+<style>.no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+
+</body></html>
