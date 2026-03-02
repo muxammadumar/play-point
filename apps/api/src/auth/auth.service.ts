@@ -52,9 +52,9 @@ export class AuthService {
     if (!hashPair) throw new UnauthorizedException('Missing hash');
     const hash = hashPair.split('=')[1];
 
-    // Build data check string from raw URL-decoded pairs (excluding hash and signature)
+    // Build data check string from raw URL-decoded pairs (excluding only hash)
     const dataCheckString = pairs
-      .filter((p) => !p.startsWith('hash=') && !p.startsWith('signature='))
+      .filter((p) => !p.startsWith('hash='))
       .map((p) => {
         const idx = p.indexOf('=');
         const key = p.substring(0, idx);
