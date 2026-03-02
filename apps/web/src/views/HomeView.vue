@@ -1,6 +1,6 @@
 <template>
   <div class="p-4 space-y-6">
-    <h1 class="text-xl font-bold">PlayPoint Debug</h1>
+    <h1 class="text-xl font-bold">PlayPoint Debug 1.0</h1>
 
     <button
       class="px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50"
