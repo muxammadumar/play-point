@@ -30,6 +30,7 @@ export const useUserStore = defineStore('user', () => {
       const res = await api.post('/auth/telegram', { initData })
       token.value = res.data.access_token
       dbUser.value = res.data.user
+      localStorage.setItem('token', res.data.access_token)
     } catch (e: unknown) {
       error.value = e instanceof Error ? e.message : 'Authentication failed'
     } finally {
@@ -45,6 +46,7 @@ export const useUserStore = defineStore('user', () => {
     telegramUser.value = null
     token.value = null
     dbUser.value = null
+    localStorage.removeItem('token')
   }
 
   return { telegramUser, token, dbUser, loading, error, isAuthenticated, displayName, setToken, reset, authenticate }
