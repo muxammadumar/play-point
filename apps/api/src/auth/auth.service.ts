@@ -51,9 +51,14 @@ export class AuthService {
     if (!hash) throw new UnauthorizedException('Missing hash');
 
     // Remove hash and signature from params, sort alphabetically, join with \n
-    params.delete('hash');
-    params.delete('signature');
-    const dataCheckString = [...params.entries()]
+    // Use raw URL string to preserve exact encoding Telegram used for signing
+    const rawParams = new URLSearchParams(
+      initData
+        .split('&')
+        .filter((p) => !p.startsWith('hash=') && !p.startsWith('signature='))
+        .join('&'),
+    );
+    const dataCheckString = [...rawParams.entries()]
       .sort(([a], [b]) => a.localeCompare(b))
       .map(([key, val]) => `${key}=${val}`)
       .join('\n');
@@ -68,8 +73,9 @@ export class AuthService {
       .digest('hex');
 
     const isDev = this.config.get('NODE_ENV') !== 'production';
-    if (!isDev && computedHash !== hash) {
-      throw new UnauthorizedException('Invalid initData signature');
+    if (computedHash !== hash) {
+      console.log('Hash mismatch:', { computedHash, hash, isDev, dataCheckString });
+      if (!isDev) throw new UnauthorizedException('Invalid initData signature');
     }
 
     // Parse the user object from initData
