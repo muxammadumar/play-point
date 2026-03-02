@@ -13,7 +13,7 @@ export class AuthService {
   ) {}
 
   async authenticate(initData: string) {
-  const user = this.validateInitData(initData);
+    const user = this.validateInitData(initData);
 
     // Upsert = update if exists, create if not
     const dbUser = await this.prisma.user.upsert({
@@ -37,7 +37,10 @@ export class AuthService {
     });
 
     // Create JWT with user's DB id and telegram id
-    const token = this.jwt.sign({ sub: dbUser.id, telegramId: Number(dbUser.telegramId) });
+    const token = this.jwt.sign({
+      sub: dbUser.id,
+      telegramId: Number(dbUser.telegramId),
+    });
 
     return { access_token: token, user: dbUser };
   }
@@ -56,7 +59,9 @@ export class AuthService {
 
     // HMAC validation per Telegram docs
     const botToken = this.config.getOrThrow<string>('TELEGRAM_BOT_TOKEN');
-    const secretKey = createHmac('sha256', 'WebAppData').update(botToken).digest();
+    const secretKey = createHmac('sha256', 'WebAppData')
+      .update(botToken)
+      .digest();
     const computedHash = createHmac('sha256', secretKey)
       .update(dataCheckString)
       .digest('hex');
