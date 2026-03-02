@@ -19,10 +19,10 @@ export const useUserStore = defineStore('user', () => {
 
   async function authenticate() {
     const initData = window.Telegram?.WebApp?.initData
-    // if (!initData) {
-    //   error.value = 'Not running inside Telegram'
-    //   return
-    // }
+    if (!initData) {
+      error.value = 'Not running inside Telegram'
+      return
+    }
 
     loading.value = true
     error.value = null
