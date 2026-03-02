@@ -50,8 +50,9 @@ export class AuthService {
     const hash = params.get('hash');
     if (!hash) throw new UnauthorizedException('Missing hash');
 
-    // Remove hash from params, sort alphabetically, join with \n
+    // Remove hash and signature from params, sort alphabetically, join with \n
     params.delete('hash');
+    params.delete('signature');
     const dataCheckString = [...params.entries()]
       .sort(([a], [b]) => a.localeCompare(b))
       .map(([key, val]) => `${key}=${val}`)
