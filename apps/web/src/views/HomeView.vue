@@ -1,6 +1,6 @@
 <template>
   <div class="p-4 space-y-6">
-    <h1 class="text-xl font-bold">PlayPoint Debug</h1>
+    <h1 class="text-xl font-bold">PlayPoint Debug <span class="text-xs font-mono text-gray-400">{{ version }}</span></h1>
 
     <section>
       <h2 class="font-semibold mb-1">Telegram initDataUnsafe</h2>
@@ -16,6 +16,8 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
+
+const version = __COMMIT_HASH__
 
 const telegramRaw = computed(() =>
   JSON.stringify(window.Telegram?.WebApp?.initDataUnsafe ?? 'No Telegram context', null, 2)
