@@ -65,6 +65,7 @@ export class AuthService {
 
     // HMAC validation per Telegram docs
     const botToken = this.config.getOrThrow<string>('TELEGRAM_BOT_TOKEN');
+    console.log('Bot token starts with:', botToken.substring(0, 12), 'length:', botToken.length);
     const secretKey = createHmac('sha256', 'WebAppData')
       .update(botToken)
       .digest();

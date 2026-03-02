@@ -27,6 +27,7 @@ export const useUserStore = defineStore('user', () => {
     loading.value = true
     error.value = null
     try {
+      console.log('initData being sent:', initData)
       const res = await api.post('/auth/telegram', { initData })
       token.value = res.data.access_token
       dbUser.value = res.data.user
