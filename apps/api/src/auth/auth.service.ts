@@ -46,26 +46,26 @@ export class AuthService {
   }
 
   private validateInitData(initData: string) {
-    const params = new URLSearchParams(initData);
-    const hash = params.get('hash');
-    if (!hash) throw new UnauthorizedException('Missing hash');
+    // Parse hash from raw string
+    const pairs = initData.split('&');
+    const hashPair = pairs.find((p) => p.startsWith('hash='));
+    if (!hashPair) throw new UnauthorizedException('Missing hash');
+    const hash = hashPair.split('=')[1];
 
-    // Remove hash and signature from params, sort alphabetically, join with \n
-    // Use raw URL string to preserve exact encoding Telegram used for signing
-    const rawParams = new URLSearchParams(
-      initData
-        .split('&')
-        .filter((p) => !p.startsWith('hash=') && !p.startsWith('signature='))
-        .join('&'),
-    );
-    const dataCheckString = [...rawParams.entries()]
-      .sort(([a], [b]) => a.localeCompare(b))
-      .map(([key, val]) => `${key}=${val}`)
+    // Build data check string from raw URL-decoded pairs (excluding hash and signature)
+    const dataCheckString = pairs
+      .filter((p) => !p.startsWith('hash=') && !p.startsWith('signature='))
+      .map((p) => {
+        const idx = p.indexOf('=');
+        const key = p.substring(0, idx);
+        const val = decodeURIComponent(p.substring(idx + 1));
+        return `${key}=${val}`;
+      })
+      .sort()
       .join('\n');
 
     // HMAC validation per Telegram docs
     const botToken = this.config.getOrThrow<string>('TELEGRAM_BOT_TOKEN');
-    console.log('Bot token starts with:', botToken.substring(0, 12), 'length:', botToken.length);
     const secretKey = createHmac('sha256', 'WebAppData')
       .update(botToken)
       .digest();
@@ -73,16 +73,16 @@ export class AuthService {
       .update(dataCheckString)
       .digest('hex');
 
-    const isDev = this.config.get('NODE_ENV') !== 'production';
     if (computedHash !== hash) {
-      console.log('Hash mismatch:', { computedHash, hash, isDev, dataCheckString });
-      if (!isDev) throw new UnauthorizedException('Invalid initData signature');
+      console.log('Hash mismatch:', { computedHash, hash, dataCheckString });
+      throw new UnauthorizedException('Invalid initData signature');
     }
 
     // Parse the user object from initData
+    const params = new URLSearchParams(initData);
     const userStr = params.get('user');
     if (!userStr) throw new UnauthorizedException('Missing user data');
 
-    return JSON.parse(decodeURIComponent(userStr));
+    return JSON.parse(userStr);
   }
 }
