@@ -1,6 +1,6 @@
 <template>
   <header class="flex items-center justify-between py-10 px-[120px]">
-    <router-link :to="{ name: 'AppealsList' }" name="home">
+    <router-link :to="{ name: 'Profile' }" name="home">
       <img src="/Logo.svg" alt="Logo" />
     </router-link>
     <el-form-item class="w-[170px] !mb-0">
