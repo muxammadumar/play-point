@@ -42,7 +42,10 @@ export class AuthService {
       telegramId: Number(dbUser.telegramId),
     });
 
-    return { access_token: token, user: dbUser };
+    return {
+      access_token: token,
+      user: { ...dbUser, telegramId: Number(dbUser.telegramId) },
+    };
   }
 
   private validateInitData(initData: string) {
