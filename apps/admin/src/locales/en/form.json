@@ -1,0 +1,28 @@
+{
+  "email": {
+    "label": "Email",
+    "placeholder": "Enter email",
+    "required": "Please enter an email",
+    "invalid": "The email address is invalid"
+  },
+  "password": {
+    "label": "Password",
+    "placeholder": "• • • • • • • • • • ",
+    "required": "Please enter a password",
+    "invalid": "The password is incorrect",
+    "confirmationLabel": "Repeat password",
+    "minLen": "Password must be at least 8 characters long",
+    "characters": "Contains both lowercase (a–z) and uppercase (A–Z) letters",
+    "digit": "Contains at least one digit (0–9) or symbol",
+    "match": "Passwords match"
+  },
+  "oldPassword": {
+    "label": "Old password",
+    "placeholder": "Enter old password",
+    "required": "Please enter the old password",
+    "invalid": "The old password is incorrect"
+  },
+  "rememberMe": {
+    "label": "Remember me"
+  }
+}

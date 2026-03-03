@@ -1,0 +1,60 @@
+{
+  "notifications": {
+    "title": "Уведомления",
+    "markAllAsRead": "Отметить все прочитанным"
+  },
+  "date": {
+    "year": "лет",
+    "today": "Сегодня",
+    "yesterday": "Вчера"
+  },
+  "filter": {
+    "status": {
+      "newest": "Самые новые",
+      "oldest": "Самые старые",
+      "byPriority": "По приоритету"
+    },
+    "agent": {
+      "all": "Все"
+    },
+    "search": {
+      "placeholder": "Поиск"
+    }
+  },
+  "link": {
+    "forgotPassword": "Забыли пароль?",
+    "resend": "Переотправить ссылку"
+  },
+  "button": {
+    "assignToMe": "Взять в работу",
+    "login": "Войти",
+    "unblock": "Разблокировать",
+    "next": "Далее",
+    "gmail": "Открыть Gmail",
+    "outlook": "Открыть Outlook",
+    "cancel": "Отмена",
+    "save": "Сохранить"
+  },
+  "error": {
+    "ADMIN_INVALID_PASSWORD": "Неверный пароль. Пожалуйста, попробуйте снова",
+    "ADMIN_NOT_FOUND": "Аккаунт недоступен",
+    "accountBlocked": "Аккаунт заблокирован. Обратитесь к администратору",
+    "accountDeactivates": "Данный аккаунт деактивирован",
+    "repetitionBlock": "Вы ввели неверные данные 5 раз подряд. Временная блокировка на 30 минут"
+  },
+  "warning": {
+    "linkExpired": "Предупреждение: Cсылка действует 15 минут"
+  },
+  "menu": {
+    "dashboard": "Дашборд",
+    "reviews": "Обращения",
+    "onlineConsultations": "Онлайн консультации",
+    "medicalContent": "Медицинский контент",
+    "settings": "Настройки",
+    "agents": "Агенты поддержки",
+    "notifications": "Уведомления",
+    "activeConsultation": "Активная консультация",
+    "consultationHistory": "История консультаций",
+    "directoryDiseases": "Справочник болезней"
+  }
+}

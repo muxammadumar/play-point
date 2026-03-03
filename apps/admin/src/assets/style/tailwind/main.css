@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+.heading-2 {
+  @apply text-2xl text-[#171717] font-medium;
+}
+
+.heading-6 {
+  @apply  text-sm text-[#171717] font-medium;
+}
+
+.paragraph-1 {
+  @apply text-base text-[#909399];
+}
+
+.paragraph-2 {
+  @apply text-sm text-[#5C5C5C] font-medium;
+}
+.paragraph-3 {
+  @apply text-xs text-[#5C5C5C];
+}

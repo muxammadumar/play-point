@@ -1,0 +1,60 @@
+{
+  "notifications": {
+    "title": "Notifications",
+    "markAllAsRead": "Mark all as read"
+  },
+  "date": {
+    "year": "years",
+    "today": "Today",
+    "yesterday": "Yesterday"
+  },
+  "filter": {
+    "status": {
+      "newest": "Newest",
+      "oldest": "Oldest",
+      "byPriority": "By priority"
+    },
+    "agent": {
+      "all": "All"
+    },
+    "search": {
+      "placeholder": "Search"
+    }
+  },
+  "link": {
+    "forgotPassword": "Forgot your password?",
+    "resend": "Resend link"
+  },
+  "button": {
+    "assignToMe": "Take into work",
+    "login": "Log in",
+    "unblock": "Unblock",
+    "next": "Next",
+    "gmail": "Open Gmail",
+    "outlook": "Open Outlook",
+    "cancel": "Cancel",
+    "save": "Save"
+  },
+  "error": {
+    "ADMIN_INVALID_PASSWORD": "Incorrect password. Please try again",
+    "ADMIN_NOT_FOUND": "Account unavailable",
+    "accountBlocked": "Account is blocked. Please contact the administrator",
+    "accountDeactivates": "This account is deactivated",
+    "repetitionBlock": "You have entered incorrect data 5 times in a row. Temporary lock for 30 minutes"
+  },
+  "warning": {
+    "linkExpired": "Warning: The link is valid for 15 minutes"
+  },
+  "menu": {
+    "dashboard": "Dashboard",
+    "reviews": "Appeals",
+    "onlineConsultations": "Online consultations",
+    "medicalContent": "Medical content",
+    "settings": "Settings",
+    "agents": "Support agents",
+    "notifications": "Notifications",
+    "activeConsultation": "Active consultation",
+    "consultationHistory": "Consultation history",
+    "directoryDiseases": "Disease directory"
+  }
+}

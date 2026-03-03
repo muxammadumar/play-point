@@ -1,0 +1,242 @@
+{
+  "login": {
+    "title": "Tizimga kirish"
+  },
+  "idleLock": {
+    "title": "Sessiya bloklandi.",
+    "description": "Davom ettirish uchun parolni kiriting"
+  },
+  "forgotPassword": {
+    "title": "Parolni tiklash",
+    "description": "Agar bunday akkaunt mavjud bo‘lsa, ko‘rsatmalar bilan xat yuboramiz"
+  },
+  "linkVerification": {
+    "title": "Iltimos, tasdiqlang",
+    "description": "Elektron pochtangizga yuborgan vaqtinchalik havolani bosing. Agar darhol kelmasa, spam papkasini tekshiring."
+  },
+  "changePassword": {
+    "title": "Parol yaratish"
+  },
+  "appeals": {
+    "title": "Murojaatlar",
+    "new": "Yangi",
+    "inProgress": "Jarayonda",
+    "closed": "Yopilgan",
+    "empty": "Hozircha qo‘llab-quvvatlashga murojaatlar mavjud emas",
+    "ticket": "Tiket",
+    "unassigned": "Agent biriktirilmagan",
+    "columnEmpty": "Hozircha bu ustunda murojaatlar yo‘q"
+  },
+  "appeal": {
+    "back": "Murojaatlarga qaytish",
+    "ticket": "Tiket",
+    "status": "Tiket holati",
+    "agent": "Agent",
+    "priority": "Prioritet",
+    "tags": "Teglar",
+    "device": "Qurilma",
+    "language": "Ilova tili",
+    "createdAt": "Yaratilgan",
+    "notAssigned": "Biriktirilmagan",
+    "statuses": {
+      "new": "Yangi",
+      "inProgress": "Jarayonda",
+      "closed": "Yopilgan"
+    },
+    "tabs": {
+      "information": "Ma’lumot",
+      "appealHistory": "Murojaatlar tarixi",
+      "medCard": "Tibbiy karta",
+      "activities": "Ilovadagi harakatlar"
+    },
+    "priorities": {
+      "urgent": "Shoshilinch",
+      "high": "Yuqori",
+      "normal": "O‘rtacha",
+      "low": "Past"
+    },
+    "activities": {
+      "archived": "Tiket tarixga o‘tkazildi",
+      "rated": "Tiket ishlashi foydalanuvchi tomonidan baholandi",
+      "closed": "Tiket yopildi",
+      "closed_auto": "Tiket vaqt o‘tishi bilan avtomatik yopildi",
+      "tags_removed": "Agent <span style='color:#E93544'>{name}</span> teglarni olib tashladi:",
+      "tags_added": "Agent <span style='color:#E93544'>{name}</span> teglar qo‘shdi:",
+      "priority_changed": "Agent <span style='color:#E93544'>{name}</span> prioritetni <span style='color:#E93544'>{priority}</span> ga o‘zgartirdi",
+      "assigned_admin": "Tiket admin tomonidan agentga biriktirildi - <span style='color:#E93544'>{name}</span>",
+      "taken_over": "Tiket boshqa agent tomonidan o‘zlashtirildi - <span style='color:#E93544'>{name}</span>",
+      "transferred": "Tiket boshqa agentga o‘tkazildi - <span style='color:#E93544'>{name}</span>",
+      "unassigned": "Tiket agentdan olib tashlandi - <span style='color:#E93544'>{name}</span>",
+      "status_changed": "Tiket holati o‘zgartirildi - <span style='color:#E93544'>{status}</span>",
+      "assigned": "Tiket agentga biriktirildi <span style='color:#E93544'>{name}</span>",
+      "created": "Murojaat foydalanuvchi tomonidan yuborildi <span style='color:#E93544'>{client}</span>"
+    }
+  },
+  "settings": {
+    "title": "Sozlamalar",
+    "general": {
+      "title": "Umumiy sozlamalar",
+      "language": "Interfeys tili"
+    },
+    "notifications": {
+      "title": "Bildirishnomalar",
+      "newAppeal": {
+        "title": "Yangi tiketlar",
+        "description": "Navbatda yangi tiket paydo bo‘lganda bildirishnoma olish"
+      },
+      "newMessage": {
+        "title": "Yangi xabarlar",
+        "description": "Biriktirilgan tiketingizga mijoz javob yozsa, xabar olish"
+      },
+      "sound": {
+        "title": "Ovoqli bildirishnomalar",
+        "description": "Yangi xabarlarda ovoz chiqarish"
+      }
+    },
+    "security": {
+      "title": "Xavfsizlik",
+      "password": {
+        "title": "Parolni o‘zgartirish",
+        "description": "Oxirgi marta parol o‘zgartirilganiga: 168 kun bo‘ldi"
+      }
+    }
+  },
+  "notifications": {
+    "title": "Bildirishnomalar",
+    "markAllAsRead": "Barchasini o‘qilgan deb belgilash"
+  },
+  "profile": {
+    "title": "Profil",
+    "logOut": "Tizimdan chiqish",
+    "email": "E-mail/Login",
+    "phone": "Telefon raqam",
+    "gender": "Jins",
+    "birthDate": "Tug‘ilgan sana",
+    "male": "Erkak",
+    "female": "Ayol",
+    "role": "Rol",
+    "languages": "Til bilish darajasi",
+    "createdAt": "Tizimda ro‘yxatdan o‘tgan sana",
+    "lastLogin": "Oxirgi kirish",
+    "tabs": {
+      "information": "Ma’lumot"
+    }
+  },
+  "changePasswordDialog": {
+    "title": "Parolni almashtirish"
+  },
+  "menu": {
+    "dashboard": "Dashboard",
+    "reviews": "Murojaatlar",
+    "onlineConsultations": "Onlayn maslahatlar",
+    "medicalContent": "Tibbiy kontent",
+    "settings": "Sozlamalar",
+    "agents": "Qo‘llab-quvvatlash agentlari",
+    "notifications": "Bildirishnomalar"
+  },
+  "form": {
+    "email": {
+      "label": "Email",
+      "placeholder": "Emailni kiriting",
+      "required": "Iltimos, email kiriting",
+      "invalid": "Email noto‘g‘ri kiritilgan"
+    },
+    "password": {
+      "label": "Parol",
+      "placeholder": "• • • • • • • • • • ",
+      "required": "Iltimos, parolni kiriting",
+      "invalid": "Parol noto‘g‘ri",
+      "confirmationLabel": "Parolni takrorlang",
+      "minLen": "Parol kamida 8 ta belgidan iborat bo‘lishi kerak",
+      "characters": "Kichik (a–z) va katta (A–Z) harflar mavjud",
+      "digit": "Kamida bitta raqam (0–9) yoki belgi bor",
+      "match": "Parollar mos"
+    },
+    "oldPassword": {
+      "label": "Eski parol",
+      "placeholder": "Eski parolni kiriting",
+      "required": "Iltimos, eski parolni kiriting",
+      "invalid": "Eski parol noto‘g‘ri"
+    },
+    "rememberMe": {
+      "label": "Meni eslab qol"
+    }
+  },
+  "filter": {
+    "status": {
+      "newest": "Eng yangilari",
+      "oldest": "Eng eskilari",
+      "byPriority": "Prioritet bo‘yicha"
+    },
+    "agent": {
+      "all": "Barchasi"
+    },
+    "search": {
+      "placeholder": "Qidirish"
+    }
+  },
+  "link": {
+    "forgotPassword": "Parolni unutdingizmi?",
+    "resend": "Havolani qayta yuborish"
+  },
+  "button": {
+    "assignToMe": "Ishga olish",
+    "login": "Kirish",
+    "unblock": "Blokdan chiqarish",
+    "next": "Keyingi",
+    "gmail": "Gmail ochish",
+    "outlook": "Outlook ochish",
+    "cancel": "Bekor qilish",
+    "save": "Saqlash"
+  },
+  "error": {
+    "ADMIN_INVALID_PASSWORD": "Noto‘g‘ri parol. Iltimos, qayta urinib ko‘ring",
+    "ADMIN_NOT_FOUND": "Akkaunt topilmadi",
+    "accountBlocked": "Akkaunt bloklangan. Administratorga murojaat qiling",
+    "accountDeactivates": "Bu akkaunt o‘chirib qo‘yilgan",
+    "repetitionBlock": "Siz ketma-ket 5 marta noto‘g‘ri ma’lumot kiritdingiz. 30 daqiqalik vaqtincha blok"
+  },
+  "warning": {
+    "linkExpired": "Ogohlantirish: Havola 15 daqiqa amal qiladi"
+  },
+  "user": {
+    "user": "Foydalanuvchi",
+    "birthDate": "Tug‘ilgan sana",
+    "gender": "Jins",
+    "phoneNumber": "Telefon raqami",
+    "male": "Erkak",
+    "female": "Ayol",
+    "height": "Bo‘yi (SM)",
+    "sm": "sm",
+    "weight": "Vazni (KG)",
+    "kg": "kg",
+    "bmi": "BMI",
+    "recentWeightChange": "So‘nggi vazn o‘zgarishlari",
+    "smoking": "Chekish",
+    "doesntSmoke": "Chekmaydi",
+    "smokes": "Chekadi",
+    "alcohol": "Alkogol",
+    "doesntDrink": "Ichmaydi",
+    "drinks": "Ichadi",
+    "profession": "Kasb",
+    "notSpecified": "Ko‘rsatilmagan",
+    "medicalAccessibility": "Tibbiy xizmatga kirish imkoniyati",
+    "physicalActivity": "Jismoniy faollik",
+    "running": "Yugurish",
+    "avarageSleepLength": "O‘rtacha uyqu davomiyligi",
+    "hours": "soat",
+    "diet": "Dieta (Odatlar)",
+    "sugar": "Shakar",
+    "chronicDiseases": "Surunkali kasalliklar",
+    "surgeries": "Operatsiyalar",
+    "drugs": "Qabul qilinadigan dorilar",
+    "allergies": "Allergiyalar",
+    "vaccines": "Vaksinalar",
+    "familyHistory": "Oilaviy anamnez"
+  },
+  "date": {
+    "year": "yosh",
+    "today": "Bugun",
+    "yesterday": "Kecha"
+  }
+}
