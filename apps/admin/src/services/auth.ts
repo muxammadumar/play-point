@@ -9,7 +9,7 @@ import type {
 export const authService = {
   async login(payload: ILoginPayload) {
     const { data } = await api.post<ILoginResponse>(
-      "/auth-admin/login",
+      "/admin-auth/login",
       payload
     );
     return data;

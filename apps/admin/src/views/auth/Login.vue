@@ -24,8 +24,8 @@
         :error="error ? t('form.email.invalid') : ''"
       >
         <el-input
-          v-model="form.email"
-          :placeholder="$t('form.email.placeholder')"
+          v-model="form.username"
+          :placeholder="$t('form.username.placeholder')"
         />
       </el-form-item>
 
@@ -68,7 +68,7 @@ const authStore = useAuthStore();
 
 const formRef = ref();
 const form = ref<ILoginPayload>({
-  email: "",
+  username: "",
   password: "",
 });
 
@@ -77,9 +77,9 @@ const error = ref<string | null>(null);
 const loading = ref(false);
 
 const rules = {
-  email: [
+  username: [
     { required: true, message: t("form.email.required") },
-    { type: "email", message: t("form.email.invalid") },
+    // { type: "email", message: t("form.email.invalid") },
   ],
   password: [{ required: true, message: t("form.password.required") }],
 };
