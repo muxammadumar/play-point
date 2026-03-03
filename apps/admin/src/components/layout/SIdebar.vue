@@ -56,7 +56,7 @@
 <script setup lang="ts">
 import Icon from "@/components/ui/Icon.vue";
 import { useI18n } from "vue-i18n";
-import { computed, ref } from "vue";
+import { computed } from "vue";
 import { useRoute } from "vue-router";
 import { useAuthStore } from "@/store/auth";
 

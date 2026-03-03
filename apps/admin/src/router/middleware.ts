@@ -12,7 +12,7 @@ export const initAuthStore = (store: AuthStore) => {
   authStore = store;
 };
 
-export const authMiddleware: Middleware = (to, from, next) => {
+export const authMiddleware: Middleware = (to, _from, next) => {
   const isAuthenticated = authStore.isAuthenticated;
   if (to.path.startsWith("/auth")) {
     return next();
@@ -24,7 +24,7 @@ export const authMiddleware: Middleware = (to, from, next) => {
   next();
 };
 
-export const guestMiddleware: Middleware = (to, from, next) => {
+export const guestMiddleware: Middleware = (to, _from, next) => {
   const isAuthenticated = authStore.isAuthenticated;
 
   if (isAuthenticated && to.path.startsWith("/auth")) {
@@ -35,7 +35,7 @@ export const guestMiddleware: Middleware = (to, from, next) => {
 };
 
 export const roleMiddleware = (allowedRoles: string[]): Middleware => {
-  return (to, from, next) => {
+  return (_to, _from, next) => {
     const userRole = authStore.user?.role;
 
     if (!userRole || !allowedRoles.includes(userRole)) {
@@ -48,7 +48,7 @@ export const roleMiddleware = (allowedRoles: string[]): Middleware => {
 
 
 export const permissionMiddleware = (permission: string): Middleware => {
-  return (to, from, next) => {
+  return (_to, _from, next) => {
     const role = authStore.user?.role;
 
     if (role !== permission) {
