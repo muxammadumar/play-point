@@ -1,9 +1,5 @@
 <template>
   <div class="flex flex-col h-screen relative overflow-visible">
-    <Notifications
-      @close="showNotificationModal = false"
-      v-if="showNotificationModal"
-    />
     <div class="flex items-center gap-3 p-6">
       <img class="w-10" src="/logo-circle.svg" alt="Logo" />
       <div>
@@ -17,20 +13,6 @@
         class="h-full border-b border-[#EBEBEB] pb-4"
       >
         <div class="grow">
-          <el-menu-item
-            ref="notificationMenu"
-            index="notifications"
-            @click="showNotifications"
-            :class="{ 'is-active': showNotificationModal }"
-          >
-            <Icon name="local-bell" size="20" class="mr-2" />
-            <template #title
-              ><p class="paragraph-2">
-                {{ t("common.menu.notifications") }}
-              </p></template
-            >
-          </el-menu-item>
-          <el-divider class="!my-5 !border-[#EBEBEB]" />
           <router-link
             v-for="item in menu.slice(0, menu.length - 1)"
             :key="item.name"
@@ -76,7 +58,6 @@ import Icon from "@/components/ui/Icon.vue";
 import { useI18n } from "vue-i18n";
 import { computed, ref } from "vue";
 import { useRoute } from "vue-router";
-import Notifications from "@/components/layout/Notifications.vue";
 import { useAuthStore } from "@/store/auth";
 
 const authStore = useAuthStore();
@@ -96,9 +77,4 @@ const menu = computed(() => [
   },
 ]);
 
-const showNotificationModal = ref(false);
-
-const showNotifications = () => {
-  showNotificationModal.value = !showNotificationModal.value;
-};
 </script>

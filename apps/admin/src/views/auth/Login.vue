@@ -53,12 +53,6 @@
         {{ $t("common.button.login") }}
       </el-button>
 
-      <router-link
-        :to="{ name: 'ForgotPassword' }"
-        class="w-full block text-center"
-      >
-        <el-link>{{ $t("common.link.forgotPassword") }}</el-link>
-      </router-link>
     </el-form>
   </div>
 </template>

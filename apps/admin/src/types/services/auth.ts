@@ -22,19 +22,4 @@ export interface IUser {
   role: UserRole;
 }
 
-export interface IForgotPasswordRequest {
-  email: string;
-}
-
-export type UserRole = "support";
-// export type UserRole = "admin" | "moderator" | "user";
-
-export interface IChangePasswordRequest {
-  password: string;
-  token: string;
-}
-export interface IUpdatePasswordRequest {
-  oldPassword: string;
-  newPassword: string;
-}
-
+export type UserRole = "admin";

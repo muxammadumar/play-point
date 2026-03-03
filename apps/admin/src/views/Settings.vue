@@ -69,30 +69,7 @@
         <el-switch v-model="sound" size="default" />
       </div>
     </div>
-    <div class="bg-white rounded-2xl p-6">
-      <h3 class="text-2xl font-medium mb-4">
-        {{ $t("user.settings.security.title") }}
-      </h3>
-      <div
-        class="bg-[#F7F7F7] rounded-2xl p-4 flex items-center justify-between cursor-pointer"
-        @click="showChangePasswordDialog = true"
-      >
-        <div>
-          <h3 class="text-xl font-medium mb-2 text-[#303133]">
-            {{ $t("user.settings.security.password.title") }}
-          </h3>
-          <p class="text-[#909399] text-base">
-            {{ $t("user.settings.security.password.description") }}
-          </p>
-        </div>
-        <Icon name="local-arrow-right" size="24" />
-      </div>
-    </div>
     <LocaleDialog :open="showLocaleDialog" @close="showLocaleDialog = false" />
-    <ChangePasswordDialog
-      :open="showChangePasswordDialog"
-      @close="showChangePasswordDialog = false"
-    />
   </div>
 </template>
 
@@ -109,8 +86,6 @@ import { computed, ref } from "vue";
 import { useLocale } from "@/composables/useLocale";
 
 import LocaleDialog from "@/components/ui/LocaleDialog.vue";
-import ChangePasswordDialog from "@/components/ui/ChangePassword.vue";
-
 const { locale } = useLocale();
 
 const localeText = computed(() => {
@@ -124,8 +99,6 @@ const localeText = computed(() => {
 });
 
 const showLocaleDialog = ref(false);
-const showChangePasswordDialog = ref(false);
-
 const newAppeal = ref(true);
 const newMessage = ref(true);
 const sound = ref(false);

@@ -13,55 +13,11 @@ export interface IAvatarProps {
   name?: string;
 }
 
-export interface IUserInfoProps {
-  src?: string;
-  size?: number | "small" | "default" | "large";
-  shape?: "circle" | "square";
-  name?: string;
-  role?: string;
-  status?: "online" | "offline" | "away" | "busy";
-}
-
-export interface IMessageProps {
-  message: any; // This will be replaced with IMessage from chat types
-}
-
-export interface IProgressiveImageProps {
-  src: string;
-  placeholder?: string;
-  alt?: string;
-  lazy?: boolean;
-}
-
-export interface ICustomSelectProps {
-  modelValue: any;
-  options: ISelectOption[];
-  placeholder?: string;
-  disabled?: boolean;
-  multiple?: boolean;
-  clearable?: boolean;
-  filterable?: boolean;
-}
-
 export interface ISelectOption {
   label: string;
   value: string | number;
   disabled?: boolean;
   icon?: string;
-}
-
-export interface IStatusSelectProps {
-  modelValue: string;
-  options?: ISelectOption[];
-  size?: "small" | "default" | "large";
-}
-
-export interface IMultiselectProps {
-  modelValue: any[];
-  options: ISelectOption[];
-  placeholder?: string;
-  disabled?: boolean;
-  max?: number;
 }
 
 // Filter types

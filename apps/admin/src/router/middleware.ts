@@ -46,17 +46,6 @@ export const roleMiddleware = (allowedRoles: string[]): Middleware => {
   };
 };
 
-export const idleLockMiddleware: Middleware = (to, from, next) => {
-  const isLocked = authStore.isSessionLocked;
-
-  if (isLocked && to.name !== "IdleLock") {
-    next({ name: "IdleLock" });
-  } else if (!isLocked && to.name === "IdleLock") {
-    next({ name: "Profile" });
-  } else {
-    next();
-  }
-};
 
 export const permissionMiddleware = (permission: string): Middleware => {
   return (to, from, next) => {

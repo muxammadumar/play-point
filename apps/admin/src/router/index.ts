@@ -8,9 +8,6 @@ import AuthLayout from "@/layout/auth.vue";
 import SupportLayout from "@/layout/support.vue";
 
 import LoginView from "@/views/auth/Login.vue";
-import IdleLockView from "@/views/auth/IdleLock.vue";
-import ForgotPasswordView from "@/views/auth/ForgotPassword.vue";
-import ChangePasswordView from "@/views/auth/ChangePassword.vue";
 
 import Settings from "@/views/Settings.vue";
 import Profile from "@/views/Profile.vue";
@@ -18,7 +15,6 @@ import Profile from "@/views/Profile.vue";
 import {
   authMiddleware,
   guestMiddleware,
-  idleLockMiddleware,
   middlewarePipeline,
   initAuthStore,
   type Middleware,
@@ -43,24 +39,6 @@ const routes: RouteRecordRaw[] = [
         component: LoginView,
         meta: { middleware: [guestMiddleware] },
       },
-      {
-        path: "idle-lock",
-        name: "IdleLock",
-        component: IdleLockView,
-        // meta: { middleware: [guestMiddleware] },
-      },
-      {
-        path: "forgot-password",
-        name: "ForgotPassword",
-        component: ForgotPasswordView,
-        meta: { middleware: [guestMiddleware] },
-      },
-      {
-        path: "change-password",
-        name: "ChangePassword",
-        component: ChangePasswordView,
-        meta: { middleware: [guestMiddleware] },
-      },
     ],
   },
   {
@@ -69,7 +47,7 @@ const routes: RouteRecordRaw[] = [
     component: SupportLayout,
     redirect: "/support/profile",
     meta: {
-      middleware: [authMiddleware, idleLockMiddleware],
+      middleware: [authMiddleware],
     },
     children: [
       {

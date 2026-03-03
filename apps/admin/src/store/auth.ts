@@ -5,9 +5,6 @@ import { authService } from "@/services/auth";
 import type {
   ILoginPayload,
   IUser,
-  IForgotPasswordRequest,
-  IChangePasswordRequest,
-  IUpdatePasswordRequest,
   IAuthState,
 } from "@/types";
 import router from "@/router";
@@ -17,20 +14,9 @@ export const useAuthStore = defineStore("auth", {
     token: Cookies.get("akfaadmin_access_token") || null,
     user: JSON.parse(Cookies.get("akfaadmin_user") || "{}") || null,
     isAuthenticated: !!Cookies.get("akfaadmin_access_token"),
-    isSessionLocked: !!Cookies.get("akfaadmin_is_idle"),
+    isSessionLocked: false,
   }),
   actions: {
-    lockSection() {
-      this.isSessionLocked = true;
-      this.isAuthenticated = false;
-      Cookies.set("akfaadmin_is_idle", "true");
-      router.push({ name: "IdleLock" });
-    },
-    unlockSection() {
-      this.isSessionLocked = false;
-      Cookies.remove("akfaadmin_is_idle");
-      router.push({ name: "AppealsList" });
-    },
     setToken(token: string) {
       this.token = token;
       Cookies.set("akfaadmin_access_token", token, { expires: 7 });
@@ -54,8 +40,7 @@ export const useAuthStore = defineStore("auth", {
         this.isAuthenticated = true;
         this.setToken(access_token);
         this.getProfile();
-        this.unlockSection();
-        router.push({ name: "AppealsList" });
+        router.push({ name: "Profile" });
         return true;
       } catch (error: any) {
         console.error("Login failed:", error);
@@ -81,32 +66,6 @@ export const useAuthStore = defineStore("auth", {
         router.push({ name: "Login" });
       } catch (error) {
         console.warn("Logout request failed:", error);
-      }
-    },
-    async forgotPassword(payload: IForgotPasswordRequest) {
-      try {
-        await authService.forgotPassword(payload);
-      } catch (error) {
-        console.error("Forgot password failed:", error);
-        throw error;
-      }
-    },
-    async changePassword(payload: IChangePasswordRequest) {
-      try {
-        await authService.changePassword(payload);
-        router.push({ name: "Login" });
-      } catch (error) {
-        console.error("Forgot password failed:", error);
-        throw error;
-      }
-    },
-
-    async updatePassword(payload: IUpdatePasswordRequest) {
-      try {
-        await authService.updatePassword(payload);
-      } catch (error) {
-        console.error("Update password failed:", error);
-        throw error;
       }
     },
   },
