@@ -8,11 +8,14 @@ const api = axios.create({
   },
 })
 
-// Attach Telegram initData as Bearer token on every request
+// Attach JWT token as Bearer on every request (except auth endpoint)
 api.interceptors.request.use((config) => {
-  const initData = window.Telegram?.WebApp?.initData
-  if (initData) {
-    config.headers.Authorization = `Bearer ${initData}`
+  const isAuthEndpoint = config.url?.startsWith('/auth')
+  if (!isAuthEndpoint) {
+    const token = localStorage.getItem('token')
+    if (token) {
+      config.headers.Authorization = `Bearer ${token}`
+    }
   }
   return config
 })

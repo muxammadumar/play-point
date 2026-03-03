@@ -1,0 +1,242 @@
+{
+  "login": {
+    "title": "Login"
+  },
+  "idleLock": {
+    "title": "Session locked.",
+    "description": "Enter your password to continue"
+  },
+  "forgotPassword": {
+    "title": "Password recovery",
+    "description": "If such an account exists, we will send an email with instructions"
+  },
+  "linkVerification": {
+    "title": "Please confirm",
+    "description": "Just click the temporary password reset link we sent to your email. If you didn’t receive it immediately, please check your spam folder."
+  },
+  "changePassword": {
+    "title": "Create password"
+  },
+  "appeals": {
+    "title": "Tickets",
+    "new": "New",
+    "inProgress": "In Progress",
+    "closed": "Closed",
+    "empty": "There are no support tickets at the moment",
+    "ticket": "Ticket",
+    "unassigned": "Agent not assigned",
+    "columnEmpty": "There are no tickets in this column"
+  },
+  "appeal": {
+    "back": "Back to tickets",
+    "ticket": "Ticket",
+    "status": "Ticket status",
+    "agent": "Agent",
+    "priority": "Priority",
+    "tags": "Tags",
+    "device": "Device",
+    "language": "App language",
+    "createdAt": "Created",
+    "notAssigned": "Not assigned",
+    "statuses": {
+      "new": "New",
+      "inProgress": "In Progress",
+      "closed": "Closed"
+    },
+    "tabs": {
+      "information": "Information",
+      "appealHistory": "Ticket history",
+      "medCard": "Medical card",
+      "activities": "App activities"
+    },
+    "priorities": {
+      "urgent": "Urgent",
+      "high": "High",
+      "normal": "Normal",
+      "low": "Low"
+    },
+    "activities": {
+      "archived": "Ticket moved to archive",
+      "rated": "Ticket was rated by the user",
+      "closed": "Ticket closed",
+      "closed_auto": "Ticket automatically closed due to time",
+      "tags_removed": "Agent <span style='color:#E93544'>{name}</span> removed tags:",
+      "tags_added": "Agent <span style='color:#E93544'>{name}</span> added tags:",
+      "priority_changed": "Agent <span style='color:#E93544'>{name}</span> changed priority to <span style='color:#E93544'>{priority}</span>",
+      "assigned_admin": "Ticket manually assigned by admin to agent - <span style='color:#E93544'>{name}</span>",
+      "taken_over": "Ticket forcibly taken over by another agent - <span style='color:#E93544'>{name}</span>",
+      "transferred": "Ticket transferred to another agent - <span style='color:#E93544'>{name}</span>",
+      "unassigned": "Ticket unassigned from agent - <span style='color:#E93544'>{name}</span>",
+      "status_changed": "Ticket status changed to - <span style='color:#E93544'>{status}</span>",
+      "assigned": "Ticket assigned to agent <span style='color:#E93544'>{name}</span>",
+      "created": "Ticket submitted by user <span style='color:#E93544'>{client}</span>"
+    }
+  },
+  "settings": {
+    "title": "Settings",
+    "general": {
+      "title": "General settings",
+      "language": "Interface language"
+    },
+    "notifications": {
+      "title": "Notifications",
+      "newAppeal": {
+        "title": "New tickets",
+        "description": "Receive a notification when a new ticket appears in the queue"
+      },
+      "newMessage": {
+        "title": "New messages",
+        "description": "Receive notifications when a client replies in the assigned ticket"
+      },
+      "sound": {
+        "title": "Sound notifications",
+        "description": "Play sound for new messages"
+      }
+    },
+    "security": {
+      "title": "Security",
+      "password": {
+        "title": "Change password",
+        "description": "Last password change: 168 days ago"
+      }
+    }
+  },
+  "notifications": {
+    "title": "Notifications",
+    "markAllAsRead": "Mark all as read"
+  },
+  "profile": {
+    "title": "Profile",
+    "logOut": "Log out",
+    "email": "E-mail/Login",
+    "phone": "Phone number",
+    "gender": "Gender",
+    "birthDate": "Birth date",
+    "male": "Male",
+    "female": "Female",
+    "role": "Role",
+    "languages": "Languages",
+    "createdAt": "Member since",
+    "lastLogin": "Last login",
+    "tabs": {
+      "information": "Information"
+    }
+  },
+  "changePasswordDialog": {
+    "title": "Change password"
+  },
+  "menu": {
+    "dashboard": "Dashboard",
+    "reviews": "Tickets",
+    "onlineConsultations": "Online consultations",
+    "medicalContent": "Medical content",
+    "settings": "Settings",
+    "agents": "Support agents",
+    "notifications": "Notifications"
+  },
+  "form": {
+    "email": {
+      "label": "Email",
+      "placeholder": "Enter email",
+      "required": "Please enter email",
+      "invalid": "Invalid email address"
+    },
+    "password": {
+      "label": "Password",
+      "placeholder": "• • • • • • • • • •",
+      "required": "Please enter password",
+      "invalid": "Incorrect password",
+      "confirmationLabel": "Repeat password",
+      "minLen": "Password must contain at least 8 characters",
+      "characters": "Contains both lowercase (a–z) and uppercase (A–Z) letters",
+      "digit": "Contains at least one number (0–9) or symbol",
+      "match": "Passwords match"
+    },
+    "oldPassword": {
+      "label": "Old password",
+      "placeholder": "Enter old password",
+      "required": "Please enter old password",
+      "invalid": "Incorrect old password"
+    },
+    "rememberMe": {
+      "label": "Remember me"
+    }
+  },
+  "filter": {
+    "status": {
+      "newest": "Newest",
+      "oldest": "Oldest",
+      "byPriority": "By priority"
+    },
+    "agent": {
+      "all": "All"
+    },
+    "search": {
+      "placeholder": "Search"
+    }
+  },
+  "link": {
+    "forgotPassword": "Forgot password?",
+    "resend": "Resend link"
+  },
+  "button": {
+    "assignToMe": "Assign to me",
+    "login": "Login",
+    "unblock": "Unlock",
+    "next": "Next",
+    "gmail": "Open Gmail",
+    "outlook": "Open Outlook",
+    "cancel": "Cancel",
+    "save": "Save"
+  },
+  "error": {
+    "ADMIN_INVALID_PASSWORD": "Incorrect password. Please try again",
+    "ADMIN_NOT_FOUND": "Account not found",
+    "accountBlocked": "Account blocked. Contact administrator",
+    "accountDeactivates": "This account is deactivated",
+    "repetitionBlock": "You entered incorrect data 5 times in a row. Temporary block for 30 minutes"
+  },
+  "warning": {
+    "linkExpired": "Warning: Link is valid for 15 minutes"
+  },
+  "user": {
+    "user": "User",
+    "birthDate": "Birth date",
+    "gender": "Gender",
+    "phoneNumber": "Phone number",
+    "male": "Male",
+    "female": "Female",
+    "height": "Height (CM)",
+    "sm": "cm",
+    "weight": "Weight (KG)",
+    "kg": "kg",
+    "bmi": "BMI",
+    "recentWeightChange": "Recent weight changes",
+    "smoking": "Smoking",
+    "doesntSmoke": "Does not smoke",
+    "smokes": "Smokes",
+    "alcohol": "Alcohol use",
+    "doesntDrink": "Does not drink",
+    "drinks": "Drinks",
+    "profession": "Profession",
+    "notSpecified": "Not specified",
+    "medicalAccessibility": "Access to medical services",
+    "physicalActivity": "Physical activity",
+    "running": "Running",
+    "avarageSleepLength": "Average sleep duration",
+    "hours": "hours",
+    "diet": "Diet (Habits)",
+    "sugar": "Sugar",
+    "chronicDiseases": "Chronic diseases",
+    "surgeries": "Surgeries",
+    "drugs": "Medication",
+    "allergies": "Allergies",
+    "vaccines": "Vaccinations",
+    "familyHistory": "Family history"
+  },
+  "date": {
+    "year": "years",
+    "today": "Today",
+    "yesterday": "Yesterday"
+  }
+}

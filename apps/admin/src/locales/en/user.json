@@ -1,0 +1,83 @@
+{
+  "settings": {
+    "title": "Settings",
+    "general": {
+      "title": "General settings",
+      "language": "Interface language"
+    },
+    "notifications": {
+      "title": "Notifications",
+      "newAppeal": {
+        "title": "New tickets",
+        "description": "Receive notifications when a new ticket appears in the queue"
+      },
+      "newMessage": {
+        "title": "New messages",
+        "description": "Receive notifications when a client replies in an assigned ticket"
+      },
+      "sound": {
+        "title": "Sound notifications",
+        "description": "Play a sound for new messages"
+      }
+    },
+    "security": {
+      "title": "Security",
+      "password": {
+        "title": "Change password",
+        "description": "Last password change: 168 days ago"
+      }
+    }
+  },
+  "profile": {
+    "title": "Profile",
+    "logOut": "Log out",
+    "email": "Email / Login",
+    "phone": "Phone number",
+    "gender": "Gender",
+    "birthDate": "Date of birth",
+    "male": "Male",
+    "female": "Female",
+    "role": "Role",
+    "languages": "Languages",
+    "createdAt": "Member since",
+    "lastLogin": "Last login",
+    "tabs": {
+      "information": "Information"
+    }
+  },
+  "user": {
+    "user": "User",
+    "birthDate": "Date of birth",
+    "gender": "Gender",
+    "phoneNumber": "Phone number",
+    "male": "Male",
+    "female": "Female",
+    "height": "Height (cm)",
+    "sm": "cm",
+    "weight": "Weight (kg)",
+    "kg": "kg",
+    "bmi": "BMI",
+    "recentWeightChange": "Recent weight changes",
+    "smoking": "Smoking",
+    "doesntSmoke": "Does not smoke",
+    "smokes": "Smokes",
+    "alcohol": "Alcohol consumption",
+    "doesntDrink": "Does not drink alcohol",
+    "drinks": "Drinks alcohol",
+    "profession": "Profession",
+    "notSpecified": "Not specified",
+    "medicalAccessibility": "Access to medical services",
+    "physicalActivity": "Physical activity",
+    "running": "Running",
+    "avarageSleepLength": "Average sleep duration",
+    "hours": "hours",
+    "diet": "Diet (habits)",
+    "sugar": "Sugar",
+    "chronicDiseases": "Chronic diseases",
+    "surgeries": "Surgeries",
+    "drugs": "Medications taken",
+    "allergies": "Allergies",
+    "vaccines": "Vaccinations",
+    "familyHistory": "Family medical history"
+  }
+}

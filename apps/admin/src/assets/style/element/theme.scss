@@ -1,0 +1,65 @@
+body {
+  // Colors
+  --el-color-primary: #E93544;
+  --el-color-primary-light-3: color-mix(
+    in srgb,
+    var(--el-color-primary) 70%,
+    white
+  );
+  --el-color-primary-light-5: color-mix(
+    in srgb,
+    var(--el-color-primary) 50%,
+    white
+  );
+  --el-color-primary-light-7: color-mix(
+    in srgb,
+    var(--el-color-primary) 30%,
+    white
+  );
+  --el-color-primary-light-8: color-mix(
+    in srgb,
+    var(--el-color-primary) 20%,
+    white
+  );
+  --el-color-primary-light-9: color-mix(
+    in srgb,
+    var(--el-color-primary) 10%,
+    white
+  );
+  --el-color-primary-dark-2: color-mix(
+    in srgb,
+    var(--el-color-primary) 80%,
+    black
+  );
+
+  // Secondary colors
+  --el-color-success: #67c23a;
+  --el-color-warning: #e6a23c;
+  --el-color-danger: #f56c6c;
+  --el-color-info: #909399;
+
+  // Typography
+  --el-font-size-base: 14px;
+  --el-font-size-small: 12px;
+  --el-font-size-large: 16px;
+
+  // Spacing & Layout
+  --el-border-radius-base: 10px;
+  --el-border-radius-small: 2px;
+  // Component specific tweaks
+
+  --el-menu-active-color: var(--el-color-primary);
+  --el-menu-hover-text-color: var(--el-color-primary);
+  --el-menu-hover-bg-color: var(--el-color-primary-light-9);
+  --el-menu-text-color: #5c5c5c;
+  --el-menu-base-level-padding: 12px
+}
+
+// Dark mode support (optional)
+// @media (prefers-color-scheme: dark) {
+//   :root {
+//     --el-color-primary: #60a5fa;
+//     --el-bg-color: #1f2937;
+//     --el-text-color-primary: #f9fafb;
+//   }
+// }

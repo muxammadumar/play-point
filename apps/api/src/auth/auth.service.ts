@@ -13,7 +13,7 @@ export class AuthService {
   ) {}
 
   async authenticate(initData: string) {
-  const user = this.validateInitData(initData);
+    const user = this.validateInitData(initData);
 
     // Upsert = update if exists, create if not
     const dbUser = await this.prisma.user.upsert({
@@ -37,38 +37,55 @@ export class AuthService {
     });
 
     // Create JWT with user's DB id and telegram id
-    const token = this.jwt.sign({ sub: dbUser.id, telegramId: Number(dbUser.telegramId) });
+    const token = this.jwt.sign({
+      sub: dbUser.id,
+      telegramId: Number(dbUser.telegramId),
+    });
 
-    return { access_token: token, user: dbUser };
+    return {
+      access_token: token,
+      user: { ...dbUser, telegramId: Number(dbUser.telegramId) },
+    };
   }
 
   private validateInitData(initData: string) {
-    const params = new URLSearchParams(initData);
-    const hash = params.get('hash');
-    if (!hash) throw new UnauthorizedException('Missing hash');
+    // Parse hash from raw string
+    const pairs = initData.split('&');
+    const hashPair = pairs.find((p) => p.startsWith('hash='));
+    if (!hashPair) throw new UnauthorizedException('Missing hash');
+    const hash = hashPair.split('=')[1];
 
-    // Remove hash from params, sort alphabetically, join with \n
-    params.delete('hash');
-    const dataCheckString = [...params.entries()]
-      .sort(([a], [b]) => a.localeCompare(b))
-      .map(([key, val]) => `${key}=${val}`)
+    // Build data check string from raw URL-decoded pairs (excluding only hash)
+    const dataCheckString = pairs
+      .filter((p) => !p.startsWith('hash='))
+      .map((p) => {
+        const idx = p.indexOf('=');
+        const key = p.substring(0, idx);
+        const val = decodeURIComponent(p.substring(idx + 1));
+        return `${key}=${val}`;
+      })
+      .sort()
       .join('\n');
 
     // HMAC validation per Telegram docs
     const botToken = this.config.getOrThrow<string>('TELEGRAM_BOT_TOKEN');
-    const secretKey = createHmac('sha256', 'WebAppData').update(botToken).digest();
+    const secretKey = createHmac('sha256', 'WebAppData')
+      .update(botToken)
+      .digest();
     const computedHash = createHmac('sha256', secretKey)
       .update(dataCheckString)
       .digest('hex');
 
     if (computedHash !== hash) {
+      console.log('Hash mismatch:', { computedHash, hash, dataCheckString });
       throw new UnauthorizedException('Invalid initData signature');
     }
 
     // Parse the user object from initData
+    const params = new URLSearchParams(initData);
     const userStr = params.get('user');
     if (!userStr) throw new UnauthorizedException('Missing user data');
 
-    return JSON.parse(decodeURIComponent(userStr));
+    return JSON.parse(userStr);
   }
 }
